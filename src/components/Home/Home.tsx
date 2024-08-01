@@ -7,8 +7,11 @@ function Home() {
   const { data } = useFetchPodResourceList(session, isAuthenticated);
   console.log('rootPodResourceList', data);
   return (
-    <div>
-      <h1 className="space-mono-bold">Nick's Pod</h1>
+    <div id="home-page-root">
+      <h1 className="space-mono-bold">nick&apos;s pod</h1>
+      <small>
+        Welcome to my pod!
+      </small>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 :root {
-    --color-green: #31EC56; 
-    --color-red-bright: #EF036C;
-    --color-pink: #EE72F8;
-    --color-white: #fff;
-    --color-black: #000;
+  --color-green: #31ec56;
+  --color-red-bright: #ef036c;
+  --color-pink: #ee72f8;
+  --color-white: #fff;
+  --color-black: #000;
 }
 
 * {
@@ -24,68 +24,102 @@
 
 html,
 body {
-    min-height: 100vh;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    scrollbar-width: 0;
-    background-color: var(--color-green);
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+  background-color: var(--color-green);
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    height: 100vh;
-    width: 100%;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100%;
+  justify-content: flex-start;
 }
 
 aside {
-    width: 56px;
-    height: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 4px;
-    background-color: var(--color-white);
-    border: 6px solid var(--color-black);
-    border-top-right-radius: 16px;
-    box-shadow: 6px 9px 0px var(--color-black);
+  width: 56px;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 4px;
+  background-color: var(--color-white);
+  border: 6px solid var(--color-black);
+  border-top-right-radius: 16px;
+  box-shadow: 6px 9px 0px var(--color-black);
 }
 
 div#content {
-    margin: 32px;
-    border-radius: 8px;
-    border: 6px solid var(--color-black);
-    background-color: var(--color-white);
-    flex: 1;
-    padding: 24px;
-    z-index: 2;
+  margin: 32px;
+  border: 6px solid var(--color-black);
+  background-color: var(--color-white);
+  flex: 1;
+  padding: 24px;
+  z-index: 2;
 
-    h1 {
-        color: var(--color-red-bright);
-        text-decoration: underline;
-        text-underline-offset: 6px;
-        text-decoration-thickness: 4px;
-        text-decoration-color: var(--color-red-bright);
-    }
+  h1 {
+    color: var(--color-red-bright);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 4px;
+    font-weight: 700;
+    text-decoration-color: var(--color-red-bright);
+  }
 }
 
 div#pink-tube {
-    position: absolute;
-    z-index: 1;
-    height: 200px;
-    width: 40px;
-    background-color: var(--color-red-bright);
-    border: 6px solid var(--color-black);
-    border-radius: 30px;
-    transform: rotate(-45deg);
-    top: -64px;
-    right: 200px;
+  position: absolute;
+  z-index: 1;
+  height: 200px;
+  width: 40px;
+  background-color: var(--color-red-bright);
+  border: 6px solid var(--color-black);
+  border-radius: 30px;
+  transform: rotate(-45deg);
+  top: -64px;
+  right: 200px;
+}
+
+@keyframes shake-low {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-120deg);
+    }
+    50% {
+      transform: rotate(0deg);
+    }
+    75% {
+      transform: rotate(120deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+div#home-page-root {
+  > small {
+    background-color: var(--color-green);
+    color: var(--color-black);
+    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+    padding: 6px;
+    font-weight: 700;
+    font-family: 'Space Mono';
+    animation-name: shake-low;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-delay: 1.2s;
+    animation-iteration-count: infinite;
+  }
 }

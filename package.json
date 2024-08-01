@@ -6,9 +6,11 @@
   "scripts": {
     "lint": "eslint --fix src",
     "prettier": "prettier --write src webpack",
-    "build": "webpack --env production --config webpack/webpack.config.mjs",
+    "bundle": "webpack --env production --config webpack/webpack.config.mjs",
+    "build": "run-s bundle copy",
     "copy": "cp -R public/css public/assets public/markdown dist/",
-    "dev": "webpack serve --env development --config webpack/webpack.config.mjs"
+    "dev": "webpack serve --env development --config webpack/webpack.config.mjs",
+    "serve": "http-server dist/"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +22,7 @@
     "@tanstack/react-query": "^5.51.16",
     "heller-2-lite": "^0.0.22",
     "heller-2-react": "^0.0.9",
+    "http-server": "^14.1.1",
     "n3": "^1.20.4",
     "process": "^0.11.10",
     "rdf-ext": "^2.5.2",
@@ -45,6 +48,7 @@
     "eslint-plugin-react": "^7.35.0",
     "globals": "^15.8.0",
     "html-webpack-plugin": "^5.6.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
     "style-loader": "^4.0.0",
     "typescript-eslint": "^8.0.0",
