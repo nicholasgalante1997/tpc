@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 import path from 'node:path';
 
 import HtmlWebpackPlugin from 'html-webpack-plugin';

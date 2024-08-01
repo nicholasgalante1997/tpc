@@ -1,3 +1,7 @@
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 import prod from './webpack.prod.mjs';
 import dev from './webpack.dev.mjs';
 /**

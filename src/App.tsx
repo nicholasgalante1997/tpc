@@ -1,7 +1,14 @@
 import React, { memo } from 'react';
 
+import { SolidAuthProvider } from './contexts';
+import Router from './Router';
+
 function App() {
-  return <h1>Nick's Pod</h1>;
+  return (
+    <SolidAuthProvider>
+      <Router />
+    </SolidAuthProvider>
+  );
 }
 
 export default memo(App);
