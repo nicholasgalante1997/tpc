@@ -12,7 +12,7 @@ function SolidAuthProvider({ children }: SolidAuthProviderProps) {
     await session.login({
       oidcIssuer: process.env.SOLID_POD_OIDC_ISSUER,
       redirectUrl: process.env.SOLID_AUTH_REDIRECT_URI,
-      clientName: process.env.SOLID_APP_CLIENT_NAME,
+      clientName: process.env.SOLID_APP_CLIENT_NAME
     });
   };
 
@@ -23,21 +23,20 @@ function SolidAuthProvider({ children }: SolidAuthProviderProps) {
 
   useEffect(() => {
     /**
-     * On initial render,
-     * if we are not authenticated,
-     * Attempt to authenticate.
+     * TODO
+     * This connection is extremely important
+     * Ensure we have logged in OR redirect on failure
      */
     const authParam = new window.URLSearchParams(window.location.search).get('datapod_auth');
-      if (!isAuthenticated && !authParam) {
-        login();
-      }
-  }, [])
+    if (!isAuthenticated && !authParam) {
+      login();
+    }
+  }, []);
 
   useEffect(() => {
-    session.handleIncomingRedirect({ restorePreviousSession: true })
-      .then(() => {
-        setIsAuthenticated(session.info.isLoggedIn);
-      });
+    session.handleIncomingRedirect({ restorePreviousSession: true }).then(() => {
+      setIsAuthenticated(session.info.isLoggedIn);
+    });
   }, [session]);
 
   return (
@@ -45,6 +44,6 @@ function SolidAuthProvider({ children }: SolidAuthProviderProps) {
       {children}
     </SolidAuthContext.Provider>
   );
-};
+}
 
 export default memo(SolidAuthProvider);

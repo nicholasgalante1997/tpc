@@ -4,11 +4,11 @@ import { ISolidAuthContext } from './types';
 import { Session } from '@inrupt/solid-client-authn-browser';
 
 const defaultContext: ISolidAuthContext = {
-    isAuthenticated: false,
-    session: new Session(),
-    async login() {},
-    async logout() {}
-}
+  isAuthenticated: false,
+  session: new Session(),
+  async login() {},
+  async logout() {}
+};
 
 export const SolidAuthContext = createContext<ISolidAuthContext>(defaultContext);
 

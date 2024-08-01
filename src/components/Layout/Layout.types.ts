@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
 export default interface LayoutProps {
-    children: React.ReactNode | React.ReactNode[];
+  children: React.ReactNode | React.ReactNode[];
 }

@@ -17,6 +17,7 @@
   "dependencies": {
     "@inrupt/solid-client": "^2.0.1",
     "@inrupt/solid-client-authn-browser": "^2.2.4",
+    "@tanstack/react-query": "^5.51.16",
     "heller-2-lite": "^0.0.22",
     "heller-2-react": "^0.0.9",
     "process": "^0.11.10",
