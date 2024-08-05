@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Learn About Solid Protocol",
+    "desc": "Solid is an open standard for structuring data, digital identities, and applications on the Web. Solid aims to support the creation of the Web as Sir Tim Berners-Lee originally envisioned it when he invented the Web at CERN in 1989. Tim sometimes refers to Solid as “the web - take 3\" — or Web3.0 — because Solid integrates a new layer of standards into the Web we already have. The goal of Solid is for people to have more agency over their data.",
+    "link": "https://solidproject.org/about.html",
+    "img": "https://solidproject.org/image/logo.svg"
+  },
+  {
+    "title": "Pokemon Pod Project",
+    "desc": "This was an effort to map the complete Pokemon Trading Card game catalog",
+    "link": "https://solidproject.org/about.html",
+    "img": "https://solidproject.org/image/logo.svg"
+  }
+]

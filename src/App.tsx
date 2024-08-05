@@ -1,7 +1,7 @@
 import React, { memo, useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-import { SolidAuthProvider } from './contexts';
+import { SolidAuthProvider, ProfileProvider } from './contexts';
 import Router from './Router';
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <SolidAuthProvider>
-        <Router />
+        <ProfileProvider>
+          <Router />
+        </ProfileProvider>
       </SolidAuthProvider>
     </QueryClientProvider>
   );
