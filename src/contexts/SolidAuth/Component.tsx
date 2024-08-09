@@ -9,6 +9,11 @@ function SolidAuthProvider({ children }: SolidAuthProviderProps) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const login = async () => {
+    console.log({
+      oidcIssuer: process.env.SOLID_POD_OIDC_ISSUER,
+      redirectUrl: process.env.SOLID_AUTH_REDIRECT_URI,
+      clientName: process.env.SOLID_APP_CLIENT_NAME
+    })
     await session.login({
       oidcIssuer: process.env.SOLID_POD_OIDC_ISSUER,
       redirectUrl: process.env.SOLID_AUTH_REDIRECT_URI,

@@ -13,6 +13,10 @@ class DataPodClient {
   constructor() {}
 
   async getResource(session: Session, path: string) {
+
+    console.log('WEBID ID ' + session.info.webId);
+    console.log('SESSION INFO', session.info);
+
     const callback = async () => {
       const response = await fetch(DataPodClient.uri + path, {
         headers: {

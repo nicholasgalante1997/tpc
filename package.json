@@ -8,7 +8,8 @@
     "lint": "eslint --fix src",
     "prettier": "prettier --write src webpack",
     "bundle": "webpack --env production --config webpack/webpack.config.mjs",
-    "build": "run-s bundle copy",
+    "style-dictionary": "node bin/style-dictionary.mjs",
+    "build": "run-s bundle copy style-dictionary",
     "copy": "cp -R public/css public/assets public/markdown dist/",
     "dev": "webpack serve --env development --config webpack/webpack.config.mjs",
     "serve": "http-server dist/"
@@ -52,6 +53,7 @@
     "json-loader": "^0.5.7",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.3.3",
+    "style-dictionary": "^4.0.1",
     "style-loader": "^4.0.0",
     "typescript-eslint": "^8.0.0",
     "webpack": "^5.93.0",

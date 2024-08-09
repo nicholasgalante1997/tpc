@@ -2,19 +2,18 @@ import React, { memo } from 'react';
 
 import { useSolidAuthContext } from '@/contexts';
 import { useFetchPodResourceList } from '@/hooks/useFetchPodFileList';
-import ProfileWidget from './components/ProfileWidget';
-import Card from '../Card/Card';
+import Card from '@/components/Card/Card';
 
 function Home() {
   const { isAuthenticated, session } = useSolidAuthContext();
   const { data } = useFetchPodResourceList(session, isAuthenticated);
+
+  console.log(data);
   return (
     <div id="home-page-root">
-      <ProfileWidget />
-      <div className="description-container">
-        <p className="space-mono-bold">You made it to my pod, that's awesome!</p>
-      </div>
-      <div className="suggestion-cards-container">
+      <h1 className="text_shadows">Nick's Pod</h1>
+      <a href="#">&lt;  &gt;</a>
+      {/* <div className="suggestion-cards-container">
         <Card
           title="Learn About Solid Protocol"
           desc={`Solid is an open standard for structuring data, digital identities, and applications on the Web. Solid aims to support the creation of the Web as Sir Tim Berners-Lee originally envisioned it when he invented the Web at CERN in 1989. Tim sometimes refers to Solid as “the web - take 3" — or Web3.0 — because Solid integrates a new layer of standards into the Web we already have. The goal of Solid is for people to have more agency over their data.`}
@@ -45,7 +44,7 @@ function Home() {
           link="#"
           img="/assets/pfp/butters.jpg"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

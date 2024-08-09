@@ -1,7 +1,11 @@
 import path from 'node:path';
 
+import dotenv from 'dotenv';
+
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import webpack from 'webpack';
+
+dotenv.config();
 
 /**
  * @type {webpack.Configuration}
