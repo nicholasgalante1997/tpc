@@ -17,6 +17,9 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.51.16
         version: 5.51.16(react@18.3.1)
+      gsap:
+        specifier: ^3.12.5
+        version: 3.12.5
       http-server:
         specifier: ^14.1.1
         version: 14.1.1
@@ -2154,6 +2157,9 @@ packages:
 
   grapoi@1.1.2:
     resolution: {integrity: sha512-FknMk4EPaVroumWDURlAScwr+cYE/e9dVmnTkuhhoghq9PWx2ap+A4+iS37dGoT6mhJbV0O+xgex6lI4c64plQ==}
+
+  gsap@3.12.5:
+    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
 
   handle-thing@2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
@@ -6536,6 +6542,8 @@ snapshots:
     dependencies:
       '@rdfjs/namespace': 2.0.1
       '@rdfjs/term-set': 2.0.3
+
+  gsap@3.12.5: {}
 
   handle-thing@2.0.1: {}
 
